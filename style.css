@@ -1,0 +1,233 @@
+body{
+  margin: 0;
+  box-sizing: content-box;
+  text-decoration: none;
+  background-color: whitesmoke;
+}
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position:fixed;
+  top: 0px;
+  background-color:#3487f3;
+  width: 100%;
+  height: 40px;
+
+}
+ul {
+  display: flex;
+  align-items: stretch; /* Default */
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+li {
+  display: block;
+  flex: 0 1 auto; /* Default */
+  align-items: center;
+  list-style-type: none;
+  margin-top: 5px;
+}
+a{
+  font-family: "SF pro display";
+  text-decoration: none;
+  font-weight: 400;
+  color:yellow;
+  opacity: 80%;
+  font-size: 18px;
+  }
+a:visited{
+  color:yellow;
+}
+a.login{
+  position: fixed;
+  float: right;
+  right: 25px;
+  
+}
+a.border:hover{
+  opacity: 100%;
+  border: 2px solid black;
+  padding: 5px;
+
+}
+input.search{
+  border-radius: 5px;
+}
+.carousel {
+    background: whitesmoke;
+    display: block;
+    align-items: center;
+    height: 300px;
+    margin: 0;
+    padding-bottom: 5%;
+
+
+  }
+  
+  .top-box {
+    width: 66%;
+    margin-right: 10px;
+
+  }
+  
+  /* cell number */
+  .top-box:before {
+    display: block;
+    text-align: center;
+
+  }
+  .flickity-viewport {
+    top: 38px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+}
+  .carousel img{
+    width: 100%;
+    height: 100%;
+    height: auto;
+    margin: 11px;
+    object-fit: fill;
+    
+
+  }
+  .headder{
+    display: grid;
+    margin: 20px;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) ;
+    grid-gap: 100px;
+    grid-auto-rows: minmax(100px,auto);
+    grid-auto-columns: minmax(50px,auto);
+    text-align: center;
+    
+  }
+  h1.Heading{
+    text-align: center;
+    font-family: "SF pro display";
+    margin: 50px 0px 20px 0px;
+    height: 70px;
+    background-color:rgb(190 215 218);
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+  }
+  .mid_img{
+    background-color:#f7e5e5;
+    font-family: "SF pro display";
+    font-size: 1.2em;
+    height: 300px;
+    padding: 5px;
+    border: 3px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 gray,0 4px 16px 0 gray;
+}
+div.box_group{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+div.vertical{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+div.box{
+  display:flex;
+  background-color: mintcream;
+  flex-direction: column;
+  width: 250px;
+  border:2px;
+  box-shadow: 0 2px 4px 0 gray, 0 4px 16px 0 gray;
+  height: 500px;
+  margin: 30px;
+}
+
+img{
+  object-fit:cover;
+  width: 250px;
+  height: 150px;
+}
+.second_box
+{
+  background-color:  #dadae2;
+}
+.carousel-bottom{
+  background: #dadae2;;
+  height: 300px;
+}
+
+
+.btm-box-img{
+  object-fit: fill;
+  width: 28%;
+  height: 225px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+@media screen and  (max-width: 600px) {
+  a.border{
+    display: none;
+  }
+  ul{
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: column;
+  }
+  .carousel {
+    background: #FAFAFA;
+    margin-bottom: 40px;
+    height: 100%;
+    padding-bottom: 5%;
+  }
+  
+  .top-box {
+    width: 100%;
+    object-fit: fill;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .top-box:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  /*btm*/
+  .carousel-bottom {
+    background: #FAFAFA;
+    margin-bottom: 40px;
+    height: 100%;
+    padding-bottom: 5%;
+  }
+  
+  .btm-box-img{
+    width: 100%;
+    object-fit: fill;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .btm-box-img:before {
+    display: block;
+    text-align: center;
+   
+    
+  }
+}
